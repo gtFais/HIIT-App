@@ -10,6 +10,8 @@
 		2C3E1B8727F1FEEB004B83F6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E1B8627F1FEEB004B83F6 /* WelcomeView.swift */; };
 		2C3E1B8927F1FEF7004B83F6 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E1B8827F1FEF7004B83F6 /* ExerciseView.swift */; };
 		2C3E1B8D27F2017A004B83F6 /* Videos in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E1B8C27F2017A004B83F6 /* Videos */; };
+		2C3E1B8F27F20715004B83F6 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E1B8E27F20715004B83F6 /* Header.swift */; };
+		2C3E1B9127F20743004B83F6 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E1B9027F20743004B83F6 /* Rating.swift */; };
 		2CD4950B27F1EA8E006B45E2 /* HIITFitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4950A27F1EA8E006B45E2 /* HIITFitAppApp.swift */; };
 		2CD4950D27F1EA8E006B45E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4950C27F1EA8E006B45E2 /* ContentView.swift */; };
 		2CD4950F27F1EA92006B45E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD4950E27F1EA92006B45E2 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		2C3E1B8627F1FEEB004B83F6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2C3E1B8827F1FEF7004B83F6 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		2C3E1B8C27F2017A004B83F6 /* Videos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Videos; sourceTree = "<group>"; };
+		2C3E1B8E27F20715004B83F6 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		2C3E1B9027F20743004B83F6 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		2CD4950727F1EA8E006B45E2 /* HIITFitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD4950A27F1EA8E006B45E2 /* HIITFitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitAppApp.swift; sourceTree = "<group>"; };
 		2CD4950C27F1EA8E006B45E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 				2CD4950C27F1EA8E006B45E2 /* ContentView.swift */,
 				2C3E1B8627F1FEEB004B83F6 /* WelcomeView.swift */,
 				2C3E1B8827F1FEF7004B83F6 /* ExerciseView.swift */,
+				2C3E1B9027F20743004B83F6 /* Rating.swift */,
+				2C3E1B8E27F20715004B83F6 /* Header.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3E1B9127F20743004B83F6 /* Rating.swift in Sources */,
+				2C3E1B8F27F20715004B83F6 /* Header.swift in Sources */,
 				2CD4950D27F1EA8E006B45E2 /* ContentView.swift in Sources */,
 				2CD4950B27F1EA8E006B45E2 /* HIITFitAppApp.swift in Sources */,
 				2C3E1B8727F1FEEB004B83F6 /* WelcomeView.swift in Sources */,

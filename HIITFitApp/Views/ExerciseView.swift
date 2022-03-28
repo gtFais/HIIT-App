@@ -12,12 +12,36 @@ struct ExerciseView: View {
     let videoNames = ["squat", "burpee", "step-up", "sun-salute"]
     let exerciseNames = ["Squat" , "Burpee", "Step Up", "Sun Salute"]
     var body: some View {
-        Text(exerciseNames[index])
+        VStack {
+            Text(exerciseNames[index])
+            Text("Video player")
+            Text("Timer")
+            Text("Start/Done Button")
+            Text("Rating")
+            Text("History Button")
+        }
     }
 }
 
+struct ActionButton: View {
+    let title: String
+    
+    var body: some View {
+        Button {
+            
+        } label: {
+            Text(title)
+        }
+
+    }
+}
+
+
+
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(index: 0)
+        VStack {
+            ExerciseView(index: 0)
+        }
     }
 }
