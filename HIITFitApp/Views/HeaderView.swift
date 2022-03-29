@@ -21,12 +21,18 @@ struct Header: View {
             }
             .font(.title)
         }
-        .padding()
     }
 }
 
 struct Header_Previews: PreviewProvider {
     static var previews: some View {
-        Header(title: "Squat")
+        Group {
+            Header(title: "Squat")
+                .previewLayout(.sizeThatFits)
+            Header(title: "Squat")
+                .preferredColorScheme(.dark)
+                .environment(\.sizeCategory, .accessibilityLarge)
+                .previewLayout(.sizeThatFits)
+        }
     }
 }
