@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct Header: View {
-    let title: String
+    let titleText: String
     var body: some View {
         VStack {
-            Text(title)
+            Text(titleText)
                 .font(.largeTitle)
             HStack {
+                Image(systemName: "hand.wave")
                 Image(systemName: "1.circle")
                 Image(systemName: "2.circle")
                 Image(systemName: "3.circle")
@@ -27,9 +28,9 @@ struct Header: View {
 struct Header_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            Header(title: "Squat")
+            Header(titleText: "Squat")
                 .previewLayout(.sizeThatFits)
-            Header(title: "Squat")
+            Header(titleText: "Squat")
                 .preferredColorScheme(.dark)
                 .environment(\.sizeCategory, .accessibilityLarge)
                 .previewLayout(.sizeThatFits)
