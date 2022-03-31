@@ -34,14 +34,14 @@ struct ExerciseView: View {
                     Button {
                         
                     } label: {
-                        Text("Start")
+                        Text(NSLocalizedString("Start", comment: "beggin exercise"))
                             .font(.title3)
                     }
                     .padding(.bottom)
                     Button {
                         selectedTab = isLastExercise ? 9 : selectedTab + 1
                     } label: {
-                        Text("Done")
+                        Text(NSLocalizedString("Done", comment: "mark as finished"))
                             .font(.title3)
                     }
                     .padding(.bottom)

@@ -13,14 +13,14 @@ struct WelcomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                Header(titleText: "Welcome")
+                Header(titleText: NSLocalizedString("Welcome", comment: "greeting"))
                 Spacer()
                 HistoryButtonView(isHistoryViewVisible: $isHistoryViewVisible)
             }
             VStack {
                 HStack(alignment: .bottom) {
                     VStack(alignment: .leading) {
-                        Text("Get fit")
+                        Text(NSLocalizedString("Get fit", comment: "invitation to exercise"))
                             .font(.largeTitle)
                         Text("with high intensity interval training")
                             .font(.headline)
@@ -32,7 +32,7 @@ struct WelcomeView: View {
                 Button {
                     selectedTab = 0
                 } label: {
-                    Text("Get Started")
+                    Text(NSLocalizedString("Get Started", comment: "invitation"))
                     Image(systemName: "arrow.right.circle")
                 }
                 .font(.title2)

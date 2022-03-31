@@ -16,9 +16,10 @@
 		2CD4950B27F1EA8E006B45E2 /* HIITFitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4950A27F1EA8E006B45E2 /* HIITFitAppApp.swift */; };
 		2CD4950D27F1EA8E006B45E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4950C27F1EA8E006B45E2 /* ContentView.swift */; };
 		2CD4951227F1EA92006B45E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD4951127F1EA92006B45E2 /* Preview Assets.xcassets */; };
+		2CE961F927F5CC4D00E8DE3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE961FB27F5CC4D00E8DE3B /* Localizable.strings */; };
+		2CE961FD27F5D26800E8DE3B /* burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CE961FF27F5D26800E8DE3B /* burpee.mp4 */; };
 		2CF11C7E27F2E430007EB2F7 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CF11C7A27F2E42F007EB2F7 /* step-up.mp4 */; };
 		2CF11C7F27F2E430007EB2F7 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CF11C7B27F2E430007EB2F7 /* sun-salute.mp4 */; };
-		2CF11C8027F2E430007EB2F7 /* burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CF11C7C27F2E430007EB2F7 /* burpee.mp4 */; };
 		2CF11C8127F2E430007EB2F7 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CF11C7D27F2E430007EB2F7 /* squat.mp4 */; };
 		2CF11C8327F2E93C007EB2F7 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF11C8227F2E93C007EB2F7 /* RatingView.swift */; };
 		2CF11C8527F30025007EB2F7 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF11C8427F30025007EB2F7 /* HistoryView.swift */; };
@@ -41,9 +42,11 @@
 		2CD4950A27F1EA8E006B45E2 /* HIITFitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitAppApp.swift; sourceTree = "<group>"; };
 		2CD4950C27F1EA8E006B45E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CD4951127F1EA92006B45E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CE961FA27F5CC4D00E8DE3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CE961FC27F5D18800E8DE3B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CE961FE27F5D26800E8DE3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/burpee.mp4; sourceTree = "<group>"; };
 		2CF11C7A27F2E42F007EB2F7 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
 		2CF11C7B27F2E430007EB2F7 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
-		2CF11C7C27F2E430007EB2F7 /* burpee.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = burpee.mp4; sourceTree = "<group>"; };
 		2CF11C7D27F2E430007EB2F7 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat.mp4; sourceTree = "<group>"; };
 		2CF11C8227F2E93C007EB2F7 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		2CF11C8427F30025007EB2F7 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 				2C3E1B8B27F1FF0F004B83F6 /* Views */,
 				2CF11C8E27F31208007EB2F7 /* Extensions */,
 				2CF11C8627F30E59007EB2F7 /* Assets.xcassets */,
+				2CE961FB27F5CC4D00E8DE3B /* Localizable.strings */,
 				2CF11C7927F2E421007EB2F7 /* Videos */,
 				2CD4951027F1EA92006B45E2 /* Preview Content */,
 			);
@@ -124,7 +128,7 @@
 		2CF11C7927F2E421007EB2F7 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				2CF11C7C27F2E430007EB2F7 /* burpee.mp4 */,
+				2CE961FF27F5D26800E8DE3B /* burpee.mp4 */,
 				2CF11C7D27F2E430007EB2F7 /* squat.mp4 */,
 				2CF11C7A27F2E42F007EB2F7 /* step-up.mp4 */,
 				2CF11C7B27F2E430007EB2F7 /* sun-salute.mp4 */,
@@ -193,6 +197,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 2CD494FE27F1EA8E006B45E2;
 			productRefGroup = 2CD4950827F1EA8E006B45E2 /* Products */;
@@ -210,8 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF11C7E27F2E430007EB2F7 /* step-up.mp4 in Resources */,
-				2CF11C8027F2E430007EB2F7 /* burpee.mp4 in Resources */,
+				2CE961FD27F5D26800E8DE3B /* burpee.mp4 in Resources */,
 				2CD4951227F1EA92006B45E2 /* Preview Assets.xcassets in Resources */,
+				2CE961F927F5CC4D00E8DE3B /* Localizable.strings in Resources */,
 				2CF11C7F27F2E430007EB2F7 /* sun-salute.mp4 in Resources */,
 				2CF11C8727F30E59007EB2F7 /* Assets.xcassets in Resources */,
 				2CF11C8127F2E430007EB2F7 /* squat.mp4 in Resources */,
@@ -245,11 +251,32 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2CE961FB27F5CC4D00E8DE3B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CE961FA27F5CC4D00E8DE3B /* en */,
+				2CE961FC27F5D18800E8DE3B /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2CE961FF27F5D26800E8DE3B /* burpee.mp4 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CE961FE27F5D26800E8DE3B /* Base */,
+			);
+			name = burpee.mp4;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		2CD4951327F1EA92006B45E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -310,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

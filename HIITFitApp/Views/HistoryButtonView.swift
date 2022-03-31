@@ -13,7 +13,7 @@ struct HistoryButtonView: View {
         Button {
             isHistoryViewVisible.toggle()
         } label: {
-            Text("History")
+            Text(NSLocalizedString("History", comment: "view user activity"))
         }
         .padding(.bottom)
     }
