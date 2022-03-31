@@ -13,7 +13,7 @@ struct WelcomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                Header(titleText: NSLocalizedString("Welcome", comment: "greeting"))
+                Header(selectedTab: $selectedTab, titleText: NSLocalizedString("Welcome", comment: "greeting"))
                 Spacer()
                 HistoryButtonView(isHistoryViewVisible: $isHistoryViewVisible)
             }
