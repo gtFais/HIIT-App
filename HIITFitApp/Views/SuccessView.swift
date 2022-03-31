@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SuccessView: View {
+    @Binding var isSuccessVisible: Bool
     var body: some View {
         VStack {
             Spacer()
@@ -39,6 +40,6 @@ struct SuccessView: View {
 
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessView()
+        SuccessView(isSuccessVisible: Binding(projectedValue: .constant(true)))
     }
 }

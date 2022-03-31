@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 9
+    @State private var isHistoryViewVisible = false
     var body: some View {
-        TabView {
-            WelcomeView()
-            ForEach(0 ..< 4) { index in
-                ExerciseView(index: index)
+        if isHistoryViewVisible {
+            HistoryView()
+        } else {
+            TabView(selection: $selectedTab) {
+                WelcomeView(selectedTab: $selectedTab, isHistoryViewVisible: $isHistoryViewVisible)
+                    .tag(9)
+                ForEach(0 ..< Exercise.exercises.count, id: \.self) { index in
+                    ExerciseView(selectedTab: $selectedTab, isHistoryViewVisible: $isHistoryViewVisible, index: index)
+                        .tag(index)
+                }
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
 }
 

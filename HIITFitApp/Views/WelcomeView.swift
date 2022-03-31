@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @Binding var selectedTab: Int
+    @Binding var isHistoryViewVisible: Bool
     var body: some View {
         ZStack {
             VStack {
                 Header(titleText: "Welcome")
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Text("History")
-                }
-                .padding(.bottom)
+                HistoryButtonView(isHistoryViewVisible: $isHistoryViewVisible)
             }
             VStack {
                 HStack(alignment: .bottom) {
@@ -33,7 +30,7 @@ struct WelcomeView: View {
                         .clipShape(Circle())
                 }
                 Button {
-                    
+                    selectedTab = 0
                 } label: {
                     Text("Get Started")
                     Image(systemName: "arrow.right.circle")
@@ -51,6 +48,6 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(selectedTab: Binding(projectedValue: .constant(9)), isHistoryViewVisible: .constant(false))
     }
 }
