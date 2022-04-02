@@ -9,13 +9,11 @@ import SwiftUI
 
 struct WelcomeView: View {
     @Binding var selectedTab: Int
-    @Binding var isHistoryViewVisible: Bool
     var body: some View {
         ZStack {
             VStack {
                 Header(selectedTab: $selectedTab, titleText: NSLocalizedString("Welcome", comment: "greeting"))
                 Spacer()
-                HistoryButtonView(isHistoryViewVisible: $isHistoryViewVisible)
             }
             VStack {
                 HStack(alignment: .bottom) {
@@ -48,6 +46,6 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView(selectedTab: Binding(projectedValue: .constant(9)), isHistoryViewVisible: .constant(false))
+        WelcomeView(selectedTab: Binding(projectedValue: .constant(9)))
     }
 }

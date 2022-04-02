@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HistoryButtonView: View {
-    @Binding var isHistoryViewVisible: Bool
+    @Binding var showHistory: Bool
     var body: some View {
         Button {
-            isHistoryViewVisible.toggle()
+            showHistory.toggle()
         } label: {
             Text(NSLocalizedString("History", comment: "view user activity"))
         }
@@ -21,6 +21,6 @@ struct HistoryButtonView: View {
 
 struct HistoryButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryButtonView(isHistoryViewVisible: .constant(true))
+        HistoryButtonView(showHistory: .constant(true))
     }
 }

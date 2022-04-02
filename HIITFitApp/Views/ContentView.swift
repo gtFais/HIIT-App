@@ -9,20 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab = 9
-    @State private var isHistoryViewVisible = false
+    @State private var showHistory = false
+    @EnvironmentObject var history: HistoryStore
     var body: some View {
-        if isHistoryViewVisible {
-            HistoryView()
+        if showHistory {
+            HistoryView(showHistory: $showHistory)
         } else {
             TabView(selection: $selectedTab) {
-                WelcomeView(selectedTab: $selectedTab, isHistoryViewVisible: $isHistoryViewVisible)
-                    .tag(9)
+                VStack {
+                    WelcomeView(selectedTab: $selectedTab)
+                        .tag(9)
+                    HistoryButtonView(showHistory: $showHistory)
+                }
                 ForEach(0 ..< Exercise.exercises.count, id: \.self) { index in
-                    ExerciseView(selectedTab: $selectedTab, isHistoryViewVisible: $isHistoryViewVisible, index: index)
-                        .tag(index)
+                    VStack {
+                        ExerciseView(selectedTab: $selectedTab, index: index)
+                            .tag(index)
+                        HistoryButtonView(showHistory: $showHistory)
+                    }
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .environmentObject(history)
         }
     }
 }
@@ -30,5 +38,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(HistoryStore())
     }
 }

@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct HistoryView: View {
-    let history = HistoryStore()
+    @Binding var showHistory: Bool
+    @EnvironmentObject var history: HistoryStore
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Button {
                 
             } label: {
                 Image(systemName: "xmark.circle")
+                    .onTapGesture {
+                        showHistory = false
+                    }
             }
             .font(.title)
             .padding(.trailing)
@@ -43,6 +47,7 @@ struct HistoryView: View {
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView()
+        HistoryView(showHistory: .constant(true))
+            .environmentObject(HistoryStore())
     }
 }

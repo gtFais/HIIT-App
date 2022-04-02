@@ -18,6 +18,9 @@ struct Header: View {
                 ForEach (0 ..< Exercise.exercises.count, id: \.self) { index in
                     let fill = index == selectedTab ? ".fill" : ""
                     Image(systemName: "\(index + 1).circle\(fill)")
+                        .onTapGesture {
+                            selectedTab = index
+                        }
                 }
             }
             .font(.title2)

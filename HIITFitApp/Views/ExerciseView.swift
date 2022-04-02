@@ -10,9 +10,12 @@ import AVKit
 
 struct ExerciseView: View {
     @Binding var selectedTab: Int
-    @Binding var isHistoryViewVisible: Bool
+    @State private var rating = 0
+    @State private var showSuccess = false
+    @State private var isTimerDone = false
+    @State private var showTimer = false
+    @EnvironmentObject var history: HistoryStore
     let index: Int
-    let interval: TimeInterval = 30
     var isLastExercise: Bool {
         index + 1 == Exercise.exercises.count
     }
@@ -28,52 +31,53 @@ struct ExerciseView: View {
                     Text("Couldn't find \(Exercise.exercises[index].videoName).mp4")
                         .foregroundColor(.red)
                 }
-                Text(Date().addingTimeInterval(interval), style: .timer)
-                    .font(.system(size: 50))
                 HStack(spacing: 150) {
+                    
                     Button {
-                        
+                        showTimer.toggle()
                     } label: {
                         Text(NSLocalizedString("Start", comment: "beggin exercise"))
                             .font(.title3)
                     }
                     .padding(.bottom)
+                    
                     Button {
-                        selectedTab = isLastExercise ? 9 : selectedTab + 1
+                        history.addDoneExercise(Exercise.exercises[index].exerciseName)
+                        isTimerDone = false
+                        showTimer.toggle()
+                        if isLastExercise {
+                            showSuccess.toggle()
+                        } else {
+                            selectedTab += 1
+                        }
                     } label: {
                         Text(NSLocalizedString("Done", comment: "mark as finished"))
                             .font(.title3)
                     }
                     .padding(.bottom)
+                    .disabled(!isTimerDone)
+                    .sheet(isPresented: $showSuccess) {
+                        SuccessView(selectedTab: $selectedTab)
+                    }
                 }
-                RatingView()
+                .font(.title3)
+                .padding()
+                if showTimer {
+                    TimerView(isTimerDone: $isTimerDone)
+                }
                 Spacer()
-                HistoryButtonView(isHistoryViewVisible: $isHistoryViewVisible)
+                RatingView(rating: $rating)
+                    .padding()
             }
         }
     }
 }
 
-struct ActionButton: View {
-    let title: String
-    
-    var body: some View {
-        Button {
-            
-        } label: {
-            Text(title)
-        }
-        
-    }
-}
-
-
-
 struct ExerciseView_Previews: PreviewProvider {
     let index = 0
     static var previews: some View {
         VStack {
-            ExerciseView(selectedTab: Binding(projectedValue: .constant(0)), isHistoryViewVisible: .constant(false), index: 0)
+            ExerciseView(selectedTab: .constant(0), index: 0)
         }
     }
 }
